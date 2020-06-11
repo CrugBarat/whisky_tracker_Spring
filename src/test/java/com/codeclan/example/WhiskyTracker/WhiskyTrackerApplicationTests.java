@@ -48,13 +48,13 @@ public class WhiskyTrackerApplicationTests {
 
 	@Test
 	public void canFindWhiskyByRegion() {
-		List<Whisky> found = whiskyRepository.findByDistilleryRegion("Speyside");
-		assertEquals(3L, found.get(0).getId().longValue());
+		List<Whisky> found = whiskyRepository.findByDistilleryRegion("Island");
+		assertEquals(5L, found.get(0).getId().longValue());
 	}
 
 	@Test
 	public void canFindDistilleryByWhiskyAge() {
-		List<Distillery> found = distilleryRepository.findByWhiskiesAge(15);
-		assertEquals(1L, found.get(0).getId().longValue());
+		List<Distillery> found = distilleryRepository.findByWhiskiesAge(16);
+		assertEquals(5L, found.get(0).getId().longValue());
 	}
 }
